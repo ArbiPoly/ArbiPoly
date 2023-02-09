@@ -12,8 +12,8 @@ import { shortBalance, upgradeFamily, hasEnoughPoly } from "../../lib/block";
 ////    Component
 import { InfoTitle, InfoValue, InfoUnit } from "../StyledComponent";
 
-// const ROLL_DURATION = 4 * 60 * 60 // 4 hours
-const ROLL_DURATION = 10 // 10 seconds
+const ROLL_DURATION = 1 * 60 * 60 // 4 hours
+// const ROLL_DURATION = 10 // 10 seconds
 const UPGRADE_FEE = Number(process.env.REACT_APP_UPGRADE_FEE)
 
 const CaseType = [
