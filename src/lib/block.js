@@ -17,8 +17,8 @@ const UPGRADE_FEE = Number(process.env.REACT_APP_UPGRADE_FEE)
 const BrownFamilyType = 18
 const FamilyCount = 7
 
-const BALANCE = '10000000000'
-const GAME_ADDRESS = '0x8254378e234424DCda1685f3c3d87709e85Cc41c'
+// const BALANCE = '10000000000'
+// const GAME_ADDRESS = '0x8254378e234424DCda1685f3c3d87709e85Cc41c'
 
 export const hasEnoughPoly = async (account, poly) => {
     try {
