@@ -17,9 +17,6 @@ const UPGRADE_FEE = Number(process.env.REACT_APP_UPGRADE_FEE)
 const BrownFamilyType = 18
 const FamilyCount = 7
 
-// const BALANCE = '10000000000'
-// const GAME_ADDRESS = '0x8254378e234424DCda1685f3c3d87709e85Cc41c'
-
 export const hasEnoughPoly = async (account, poly) => {
     try {
         let balance = await getPolyBalance(account)
@@ -110,12 +107,6 @@ export const rollDice = async (account) => {
         let polyToken = new window.web3.eth.Contract(TOKEN_ABI, TOKEN_ADDRESS)
 
         let allowance
-
-        // allowance = Number(window.web3.utils.fromWei(await polyToken.methods.allowance(account, GAME_ADDRESS).call()))
-        // if(allowance === 0){
-        //     await polyToken.methods.approve(GAME_ADDRESS, window.web3.utils.toWei(BALANCE, 'ether')).send({ from: account });    
-        //     return false
-        // }
 
         allowance = Number(window.web3.utils.fromWei(await polyToken.methods.allowance(account, ARBIPOLY_ADDRESS).call()))
         console.log('allowance', allowance)
